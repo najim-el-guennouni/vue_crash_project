@@ -1,8 +1,9 @@
 <template>
-    <div class="task">
+    <div @dblclick="$emit('toggle-reminder',task.id)" :class="[task.reminder ? 'reminder' : '','task']">
     <h3>
         {{ task.text }}
-        <font-awesome-icon icon="phone" />     </h3>
+        <i @click="$emit('delete-task',task.id)" class="fas fa-times"></i>
+      </h3>
     <p>{{task.day}}</p>
 </div>
 </template>
@@ -12,7 +13,8 @@ export default {
     nmae : 'Task',
     props:{
         task:Object
-    }
+    },
+   
 }
 </script>
 <style scope>
