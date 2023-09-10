@@ -7,7 +7,7 @@
     
     <div class="form-control">
       <label>Day & Time</label>
-      <input type="text" name="day" v-model="day" placeholder="Add Day & Time" />
+      <input type="date" name="day" v-model="day" placeholder="Add Day & Time" />
     </div>
     <div class="form-control form-control-check">
       <label>Set Reminder</label>

@@ -2,9 +2,9 @@
   "tasks": [
     {
       "text": "test",
-      "day": "tst",
+      "day": "2023-09-10",
       "reminder": true,
-      "id": 2
+      "id": 3
     }
   ]
 }
