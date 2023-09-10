@@ -14,16 +14,20 @@
       @delete-task="deleteTask"
       :tasks="tasks"
     />
+    
+    <Footer />
   </div>
 </template>
 <script>
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 import Tasks from './components/Tasks.vue';
 import AddTask from './components/AddTask.vue';
 export default {
   name: 'App',
   components: {
     Header,
+    Footer,
     Tasks,
     AddTask,
   },
@@ -65,7 +69,7 @@ export default {
    async  toggleReminder(id) {
     
     const taskToToggle  = await this.fetchTask(id)
-    const updTask = {...taskToToggle,reminder: !taskToToggle.reminder}
+    const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
     
     const res = await fetch(`http://localhost:5000/tasks/${id}`,{
       method: 'PUT',
